@@ -1,5 +1,9 @@
 import random
+import sys
+sys.path.append('B:\pythonn\hangman\madlibs')
+import words
 from words import word_list
+
 
 
 def get_word():

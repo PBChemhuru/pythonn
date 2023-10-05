@@ -20,7 +20,7 @@ def passwordgenerate():
 
 
 window = Tk()
-window.geometry("300x150")
+window.geometry("300x250")
 window.title("Password Generator")
 
 passlen = StringVar()

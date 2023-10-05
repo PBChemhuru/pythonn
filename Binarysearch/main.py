@@ -18,7 +18,7 @@ def binary_search(arr, x):
 
 num = random.randint(100, size=7)
 print(num)
-s = 5
+s = 45
 result = binary_search(num, s)
 if result != -1:
     print("Element is present at index", str(result))
