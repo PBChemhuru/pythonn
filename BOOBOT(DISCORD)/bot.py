@@ -2,7 +2,7 @@ import os
 import random
 import discord
 from dotenv import load_dotenv
-from sweet_nothing import sweet_list, mad_thing, smexy_things
+from sweet_nothing import sweet_list, mad_thing,
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -19,9 +19,6 @@ def get_sweet():
 def get_mad():
     mad = random.choice(mad_thing)
     return mad.lower()
-def get_smexy():
-    smexy = random.choice(smexy_things)
-    return smexy.lower()
 
 @client.event
 async def on_ready():
@@ -51,10 +48,7 @@ async def on_message(message):
         await message.channel.send(get_mad())
         print(get_mad())
         return
-    elif user_message.lower() == 'turnon':
-        await message.channel.send(get_smexy())
-        print(get_smexy())
-        return
+
 
 
 
