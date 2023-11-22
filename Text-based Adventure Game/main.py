@@ -1,5 +1,6 @@
 import random
 import time
+from PIL import Image
 
 answer_A = ["A", "a"]
 answer_B = ["B", "b"]
@@ -43,6 +44,7 @@ def intro():
 
 def option_armed():
     sword == 1
+
     print("Sword in hand you answer the door with your usually scowl.You see a child panting hard he looks up "
           "to you panic in his eyes \n 'Are your Northern hermit' you give me a nod and his panic turns to hope "
           "'Please save my mommy,bad men came and they trying to  take her away'"
@@ -64,11 +66,15 @@ def option_armed():
 
 
 def option_ignore():
+    img = Image.open("FIRE PLACE.jpg")
+    img.show()
     print("You ignore the continuous knocking and eventually it stops,clearly who ever it was got bored and moved on"
           "\nWELL THAT'S GAME OVER,NOTHING CHANGES IF YOU DO NOTHING.")
 
 
 def option_peek():
+    img = Image.open("curtain peek.jpg")
+    img.show()
     print("You look through window by the door peeling the curtain back a bit and see a child.He knocks on the door "
           "and looks around almost as if he is on the look out for someone chasing him.What do you do?")
     time.sleep(1)
@@ -82,7 +88,11 @@ def option_peek():
 
 
 def option_house():
-    print("You follow the child to what you believe to be their home and unsurprisingly you find it in shambles the "
+    img = Image.open("ransacked.jpg")
+    img.show()
+
+    print("you open the door for him and he begs for you help and thank his mother is being threaten by some bad men"
+          "You follow the child to what you believe to be their home and unsurprisingly you find it in shambles the "
           "homes didn't seem to have much but what ever little they had in their humble home is broken and in "
           "shambles.\nThe home has been ransacked but the perpetrators are gone adn the house is "
           "lifeless.\n'Mommy!'the boy calls out running into the house searching for his mother'\nYou step out of the "
@@ -99,6 +109,8 @@ def option_house():
 
 
 def option_ignore2():
+    img = Image.open("FIRE PLACE.jpg")
+    img.show()
     print("You ignore the continuous knocking and pleads of the child and eventually it stops.You carry your night "
           "unbothered by it all "
           "\nWOW YOU HAVE NO HEART WHAT SO EVER.ARE YOU EVEN HUMAN?.ANYWAY GAME OVER.")
@@ -106,8 +118,10 @@ def option_ignore2():
 
 def option_threaten():
     if sword == 1:
+        img = Image.open("gettyimages-698117086-2048x2048.jpg")
+        img.show()
         print("You draw your sword putting it up to his neck 'if you don't want to lose your heard i suggest you "
-              "start speaking before you lose your head' under the influence of your encouragement the man begins to "
+              "start speaking' under the influence of your encouragement the man begins to "
               "talk.\nYou find out that the child's mother had being taken by the local gang that harass some of the "
               "local townspeople.You sigh you really don't want to get involved with the local gang but you have "
               "already come this fun you might as well see it through.Rising to your feet you sheathed your sword you "
@@ -160,14 +174,20 @@ def option_team():
     if choice in answer_A:
         rol = dice()
         if rol > 3:
-            print("eric saves you")
+            img = Image.open("MalfoyAndSnape_WB_F6_MalfoyBleedingOnFloorSectumSempra_HP6D-07904.jpg")
+            img.show()
+            print("eric saves you but you manage to rescue everyone")
         else:
+            img = Image.open("MalfoyAndSnape_WB_F6_MalfoyBleedingOnFloorSectumSempra_HP6D-07904.jpg")
+            img.show()
             print("you died")
     elif choice in answer_B:
         rol = dice()
         if rol > 5:
             print("you convince them to let go eric mother")
         else:
+            img = Image.open("MalfoyAndSnape_WB_F6_MalfoyBleedingOnFloorSectumSempra_HP6D-07904.jpg")
+            img.show()
             print("you died")
 
 
@@ -176,6 +196,8 @@ def option_solo():
     if rol > 4:
         print("you survive solo But eric's mother does not survive ")
     else:
+        img = Image.open("MalfoyAndSnape_WB_F6_MalfoyBleedingOnFloorSectumSempra_HP6D-07904.jpg")
+        img.show()
         print("you died")
 
 
@@ -205,15 +227,28 @@ def option_disarm():
         print("You succeeded"
               "\nYou find out that the child's mother had being taken by the local gang that harass some of the "
               "local townspeople.You sigh you really don't want to get involved with the local gang but you have "
-              "already come this fun you might as well see it through.Rising to your feet you sheathed your sword "
-              "you "
+              "already come this far you might as well see it through.Rising to your feet you sheathed your sword "
+              "you look down at the now unarmed and floored hooligan'look i will make this easy for you,tell me where the childs mom is or i start breaking bones'"
+              "the young man answer obediently and before you know it you know where eric's mother is and you"
               "know where the gangs hang out and know its dangerous.\nWill you bring the child with you?"
               )
+        print("""  A. Take him with you
+                             B. Leave him them""")
+        choice = input(">>> ")
+        if choice in answer_A:
+            option_team()
+        elif choice in answer_B:
+            option_solo()
     else:
-        print()
+        img = Image.open("MalfoyAndSnape_WB_F6_MalfoyBleedingOnFloorSectumSempra_HP6D-07904.jpg")
+        img.show()
+        print("You fail to  disarm him and end up with knife sticking out your chest as you bleed out slowly adn die")
+
 
 
 def option_lie():
+    img = Image.open("MalfoyAndSnape_WB_F6_MalfoyBleedingOnFloorSectumSempra_HP6D-07904.jpg")
+    img.show()
     print("he stabs you died")
 
 
