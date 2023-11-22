@@ -2,7 +2,7 @@ import os
 import random
 import discord
 from dotenv import load_dotenv
-from sweet_nothing import sweet_list, mad_thing,
+from sweet_nothing import sweet_list, mad_thing
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
